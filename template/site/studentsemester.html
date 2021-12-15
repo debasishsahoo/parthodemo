@@ -1,0 +1,742 @@
+{% extends 'core/studentBase.html' %}
+{% load static %}
+
+
+{% block content1 %}
+<ul class="nav nav-pills">
+    <li class="nav-item"><a class="nav-link " href="{% url 'student_profile' %}"
+            ><i class="fas fa-chart-line"></i>Activity</a></li>
+    <li class="nav-item"><a class="nav-link active" href="{% url 'student_semester' %}"
+            ><i class="fas fa-book-open"></i>Semester
+            Details</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'student_attendence' %}"
+            ><i class="fas fa-calendar-minus"></i>View
+            Attendence</a></li>
+    <li class="nav-item"><a class="nav-link " href="{% url 'student_editpro' %}"
+            ><i class="fas fa-edit"></i>Edit
+            Profile</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'student_addac' %}"
+            ><i class="fas fa-plus"></i>Add
+            Activity</a></li>
+    <!-- <li class="nav-item"><a class="nav-link" href="#"  ><i
+                class="fas fa-plus"></i>Add
+            CV Details</a></li> -->
+</ul>
+{% endblock content1 %}
+
+
+
+{% block content2 %}
+<div class="pane" id="timeline">
+    <!-- The timeline -->
+    <div class="timeline timeline-inverse">
+        <!-- timeline time label -->
+
+        <!-- /.timeline-label -->
+        <!-- timeline item -->
+        <div>
+            <div class="timeline-item">
+                <div class="timeline-body">
+                    <div class="container-fluid">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"> First
+                                        Semester</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10px">#
+                                                </th>
+                                                <th>Subject</th>
+                                                <th>Progress</th>
+                                                <th style="width: 40px">
+                                                    Marks
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>Subject 1</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar progress-bar-danger"
+                                                            style="width: 55%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-danger">7.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>Subject 2</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar bg-warning"
+                                                            style="width: 70%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-warning">8.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>Subject 3</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-primary"
+                                                            style="width: 30%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-primary">6.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>Subject 4</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-success"
+                                                            style="width: 90%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-success">9.50</span>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"> Second
+                                        Semester</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10px">#
+                                                </th>
+                                                <th>Subject</th>
+                                                <th>Progress</th>
+                                                <th style="width: 40px">
+                                                    Marks
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>Subject 1</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar progress-bar-danger"
+                                                            style="width: 55%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-danger">7.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>Subject 2</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar bg-warning"
+                                                            style="width: 70%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-warning">8.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>Subject 3</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-primary"
+                                                            style="width: 30%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-primary">6.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>Subject 4</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-success"
+                                                            style="width: 90%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-success">9.50</span>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"> Third
+                                        Semester</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10px">#
+                                                </th>
+                                                <th>Subject</th>
+                                                <th>Progress</th>
+                                                <th style="width: 40px">
+                                                    Marks
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>Subject 1</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar progress-bar-danger"
+                                                            style="width: 55%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-danger">7.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>Subject 2</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar bg-warning"
+                                                            style="width: 70%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-warning">8.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>Subject 3</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-primary"
+                                                            style="width: 30%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-primary">6.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>Subject 4</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-success"
+                                                            style="width: 90%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-success">9.50</span>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"> Forth
+                                        Semester</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10px">#
+                                                </th>
+                                                <th>Subject</th>
+                                                <th>Progress</th>
+                                                <th style="width: 40px">
+                                                    Marks
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>Subject 1</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar progress-bar-danger"
+                                                            style="width: 55%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-danger">7.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>Subject 2</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar bg-warning"
+                                                            style="width: 70%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-warning">8.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>Subject 3</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-primary"
+                                                            style="width: 30%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-primary">6.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>Subject 4</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-success"
+                                                            style="width: 90%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-success">9.50</span>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"> Fifth
+                                        Semester</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10px">#
+                                                </th>
+                                                <th>Subject</th>
+                                                <th>Progress</th>
+                                                <th style="width: 40px">
+                                                    Marks
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>Subject 1</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar progress-bar-danger"
+                                                            style="width: 55%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-danger">7.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>Subject 2</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar bg-warning"
+                                                            style="width: 70%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-warning">8.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>Subject 3</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-primary"
+                                                            style="width: 30%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-primary">6.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>Subject 4</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-success"
+                                                            style="width: 90%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-success">9.50</span>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"> Sixth
+                                        Semester</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10px">#
+                                                </th>
+                                                <th>Subject</th>
+                                                <th>Progress</th>
+                                                <th style="width: 40px">
+                                                    Marks
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>Subject 1</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar progress-bar-danger"
+                                                            style="width: 55%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-danger">7.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>Subject 2</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar bg-warning"
+                                                            style="width: 70%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-warning">8.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>Subject 3</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-primary"
+                                                            style="width: 30%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-primary">6.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>Subject 4</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-success"
+                                                            style="width: 90%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-success">9.50</span>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"> Seventh
+                                        Semester</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10px">#
+                                                </th>
+                                                <th>Subject</th>
+                                                <th>Progress</th>
+                                                <th style="width: 40px">
+                                                    Marks
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>Subject 1</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar progress-bar-danger"
+                                                            style="width: 55%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-danger">7.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>Subject 2</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar bg-warning"
+                                                            style="width: 70%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-warning">8.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>Subject 3</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-primary"
+                                                            style="width: 30%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-primary">6.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>Subject 4</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-success"
+                                                            style="width: 90%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-success">9.50</span>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"> Eighth
+                                        Semester</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10px">#
+                                                </th>
+                                                <th>Subject</th>
+                                                <th>Progress</th>
+                                                <th style="width: 40px">
+                                                    Marks
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+                                                <td>Subject 1</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar progress-bar-danger"
+                                                            style="width: 55%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-danger">7.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.</td>
+                                                <td>Subject 2</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs">
+                                                        <div class="progress-bar bg-warning"
+                                                            style="width: 70%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-warning">8.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.</td>
+                                                <td>Subject 3</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-primary"
+                                                            style="width: 30%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-primary">6.50</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.</td>
+                                                <td>Subject 4</td>
+                                                <td>
+                                                    <div
+                                                        class="progress progress-xs progress-striped active">
+                                                        <div class="progress-bar bg-success"
+                                                            style="width: 90%">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span
+                                                        class="badge bg-success">9.50</span>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+
+    </div>
+</div>
+{% endblock content2 %}
+
+

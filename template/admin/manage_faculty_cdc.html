@@ -1,0 +1,647 @@
+{% extends 'core/cdcBase.html' %}
+{% load static %}
+
+{% block content1 %}
+<li id="middle"><b href="#"><img src="{% static 'img/bg.png' %}">
+                    <div><span> CDC </span></div>
+                    </h5>
+                </b></li>
+            <!-- <li class="list"><a href="cdc_dash.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a> -->
+                <li class="list"><a href="{% url 'manage_student_cdc' %}"><i class="fas fa-user-graduate"></i><span>Manage Student</span></a></li>
+            <li class="list active"><a href="{% url 'manage_faculty_cdc' %}"><i class="fas fa-chalkboard-teacher"></i><span>Manage
+                        Faculty</span></a></li>
+{% endblock content1 %}
+
+
+{% block content2 %}
+Student Tracking System | CDC Login | Manage Faculty
+{% endblock content2 %}
+
+
+{% block content3 %}
+<section class="content">
+            <div class="container-fluid">
+                <div class="bold">Manage Faculty</div>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <!-- general form elcard-headeements -->
+                        <div class="card details">
+                            <div class="card-header p-2">
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item c1"><a class="nav-link active" href="#ME"
+                                            data-toggle="tab"><i class="fas fa-cogs"></i>Mechanical (40*)</a></li>
+                                    <li class="nav-item c2"><a class="nav-link" href="#CE"
+                                            data-toggle="tab"><i class="fas fa-city"></i>Civil (3*)
+                                            </a></li>
+                                    <li class="nav-item c3"><a class="nav-link" href="#EE"
+                                            data-toggle="tab"><i class="fas fa-bolt"></i>Electrical (42*)
+                                            </a></li>
+                                    <li class="nav-item c4"><a class="nav-link" href="#ECE"
+                                            data-toggle="tab"><i class="fas fa-wifi"></i>Electronics (50*)
+                                            </a></li>
+                                    <li class="nav-item c5"><a class="nav-link" href="#CSE"
+                                            data-toggle="tab"><i class="fas fa-laptop-code"></i>Computer Science (110*)
+                                            </a></li>
+                                    
+                                </ul>
+                            </div><!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <div class="active tab-pane" id="ME">
+                                        <!-- Post -->
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <!-- general form elcard-headeements -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="card-title">Faculty Details</h5>
+                        
+                                                        <div class="card-tools">
+                                                            <div class="input-group input-group-sm" style="width: 150px;">
+                                                                <input type="text" name="table_search" class="form-control float-right"
+                                                                    placeholder="Search">
+                        
+                                                                <div class="input-group-append">
+                                                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"
+                                                                            aria-hidden="true"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.card-header -->
+                                                    <div class="card-body table-responsive p-0">
+                                                        <table class="table table-hover text-nowrap">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID No</th>
+                                                                    <th>First Name</th>
+                                                                    <th>Last Name</th>
+                                                                    
+                                                                    <th>Email</th>
+                                                                    <th>Contact No</th>
+                                                                    <th>Profile Pic</th>
+                                                                    <th>Start Date</th>
+                                                                    <th>End Date</th>
+                                                                    
+                                                                    <th>Department</th>
+                                                                    
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                        
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                        
+                        
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- /.card-body -->
+                                                </div>
+                                                <!-- /.card -->
+                        
+                                            </div>
+                                        </div>
+                                        <!-- /.post -->
+                                    </div>
+                                    <!-- /.tab-pane -->
+                                    <div class="tab-pane" id="CE">
+                                        <!-- The timeline -->
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <!-- general form elcard-headeements -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="card-title">Faculty Details</h5>
+                        
+                                                        <div class="card-tools">
+                                                            <div class="input-group input-group-sm" style="width: 150px;">
+                                                                <input type="text" name="table_search" class="form-control float-right"
+                                                                    placeholder="Search">
+                        
+                                                                <div class="input-group-append">
+                                                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"
+                                                                            aria-hidden="true"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.card-header -->
+                                                    <div class="card-body table-responsive p-0">
+                                                        <table class="table table-hover text-nowrap">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID No</th>
+                                                                    <th>First Name</th>
+                                                                    <th>Last Name</th>
+                                                                    
+                                                                    <th>Email</th>
+                                                                    <th>Contact No</th>
+                                                                    <th>Profile Pic</th>
+                                                                    <th>Start Date</th>
+                                                                    <th>End Date</th>
+                                                                    
+                                                                    <th>Department</th>
+                                                                    
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                        
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Suman </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                        
+                        
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- /.card-body -->
+                                                </div>
+                                                <!-- /.card -->
+                        
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="EE">
+                                        <!-- The timeline -->
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <!-- general form elcard-headeements -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="card-title">Faculty Details</h5>
+                        
+                                                        <div class="card-tools">
+                                                            <div class="input-group input-group-sm" style="width: 150px;">
+                                                                <input type="text" name="table_search" class="form-control float-right"
+                                                                    placeholder="Search">
+                        
+                                                                <div class="input-group-append">
+                                                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"
+                                                                            aria-hidden="true"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.card-header -->
+                                                    <div class="card-body table-responsive p-0">
+                                                        <table class="table table-hover text-nowrap">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID No</th>
+                                                                    <th>First Name</th>
+                                                                    <th>Last Name</th>
+                                                                    
+                                                                    <th>Email</th>
+                                                                    <th>Contact No</th>
+                                                                    <th>Profile Pic</th>
+                                                                    <th>Start Date</th>
+                                                                    <th>End Date</th>
+                                                                    
+                                                                    <th>Department</th>
+                                                                    
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                        
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Sujan </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                        
+                        
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- /.card-body -->
+                                                </div>
+                                                <!-- /.card -->
+                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.tab-pane -->
+
+                                    <div class="tab-pane" id="ECE">
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <!-- general form elcard-headeements -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="card-title">Faculty Details</h5>
+                        
+                                                        <div class="card-tools">
+                                                            <div class="input-group input-group-sm" style="width: 150px;">
+                                                                <input type="text" name="table_search" class="form-control float-right"
+                                                                    placeholder="Search">
+                        
+                                                                <div class="input-group-append">
+                                                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"
+                                                                            aria-hidden="true"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.card-header -->
+                                                    <div class="card-body table-responsive p-0">
+                                                        <table class="table table-hover text-nowrap">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID No</th>
+                                                                    <th>First Name</th>
+                                                                    <th>Last Name</th>
+                                                                    
+                                                                    <th>Email</th>
+                                                                    <th>Contact No</th>
+                                                                    <th>Profile Pic</th>
+                                                                    <th>Start Date</th>
+                                                                    <th>End Date</th>
+                                                                    
+                                                                    <th>Department</th>
+                                                                    
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                        
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Rahul </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                        
+                        
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- /.card-body -->
+                                                </div>
+                                                <!-- /.card -->
+                        
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="tab-pane" id="CSE">
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <!-- general form elcard-headeements -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="card-title">Faculty Details</h5>
+                        
+                                                        <div class="card-tools">
+                                                            <div class="input-group input-group-sm" style="width: 150px;">
+                                                                <input type="text" name="table_search" class="form-control float-right"
+                                                                    placeholder="Search">
+                        
+                                                                <div class="input-group-append">
+                                                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"
+                                                                            aria-hidden="true"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.card-header -->
+                                                    <div class="card-body table-responsive p-0">
+                                                        <table class="table table-hover text-nowrap">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>ID No</th>
+                                                                    <th>First Name</th>
+                                                                    <th>Last Name</th>
+                                                                    
+                                                                    <th>Email</th>
+                                                                    <th>Contact No</th>
+                                                                    <th>Profile Pic</th>
+                                                                    <th>Start Date</th>
+                                                                    <th>End Date</th>
+                                                                    
+                                                                    <th>Department</th>
+                                                                    
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                        
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Mousumi </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>28100319018</td>
+                                                                    <td>Partha </td>
+                                                                    <td>Das</td>
+                                                                    
+                                                                    <td>daspartha@gmail.com</td>
+                                                                    <td>9874563210</td>
+                                                                    <td> <img src="{% static 'img/bg.png' %}" style="width: 100px;" /> </td>
+                                                                    <td>2019</td>
+                                                                    <td>2023</td>
+                                                                    
+                                                                    <td>ECE</td>
+                                                                    
+                                                                    <td>
+                                                                        <a href="view_faculty_cdc.html"
+                                                                            class="btn btn-success"><i class="fas fa-eye"></i> View</a>
+                                                                        <a href="#"
+                                                                            class="btn btn-danger"><i class="fas fa-ban"></i> Block</a>
+                                                                    </td>
+                                                                </tr>
+                        
+                        
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- /.card-body -->
+                                                </div>
+                                                <!-- /.card -->
+                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- /.tab-pane -->
+                                </div>
+                                <!-- /.tab-content -->
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock content3 %}

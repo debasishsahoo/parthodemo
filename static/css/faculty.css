@@ -1,0 +1,203 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #f4f6f9;
+}
+.main{
+  position: fixed;
+  background: #042331;
+  height: 100%;
+  width: 250px;
+  box-shadow: 1px 10px 20px;
+  transition: 1s;
+  transition-property:left;
+}
+.main header{
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 65px;
+  background: #063146;
+  user-select: none;
+}
+.main ul{
+  list-style: none;
+}
+.main img{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin: 10px 0;
+  border-radius: 50%;
+}
+.main ul #middle{
+  text-align: center;
+}
+.main ul #middle b{
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif ;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid black;
+}
+.main ul .active{
+  background: #063146;
+}
+.main ul .list a{
+  text-decoration: none;
+  display: block;
+  line-height: 60px;
+  font-size: 18px;
+  color: white;
+  padding-left: 40px ;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+}
+.main ul .list a:hover{
+  padding-left: 50px;
+}
+.main ul .list a i{
+  margin-right: 16px;
+}
+.content1{
+  margin-left: 250px;
+  overflow: hidden;
+}
+.content2{
+  overflow: hidden;
+}
+.content1 .menu, .content2 .menu{
+  background: white;
+  width: 100%;
+  height: 65px;
+}
+.content1 .menu header, .content2 .menu header {
+  font-size: 22px;
+  line-height: 65px;
+  margin-left: 20px;
+  user-select: none;
+  float: left;
+}
+.content1 .menu header span, .content2 .menu header span{
+  margin-left: 5px;
+}
+.content1 .menu header label, .content2 .menu header label{
+  cursor: pointer;
+}
+
+#check:checked~.main{
+  left: -190px;
+
+}
+
+#check:checked~.main a span{
+  display: none;
+}
+#check:checked~.main b span{
+  display: none;
+}
+#check:checked~.main a{
+  font-size: 20px;
+  margin-left: 170px;
+  width: 80px;
+}
+#check:checked~.main b{
+  font-size: 20px;
+  margin-left: 170px;
+  width: 80px;
+}
+#check:checked~.main #middle b img{
+  margin-left: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+
+.content1 .menu .log, .content2 .menu .log{
+  float: right;
+  line-height: 65px;
+  margin-right: 20px;
+}
+.content1 .menu .log ul,.content2 .menu .log ul{
+  list-style: none;
+}
+.content1 .menu .log ul a,.content2 .menu .log ul a{
+  text-decoration: none;
+  color: black;
+}
+.content1 .menu .log ul li i, .content2 .menu .log ul li i{
+  margin-right: 10px;
+}
+
+#check:checked~.content1{
+  margin-left: 60px;
+}
+#check{
+  display: none;
+}
+.content1 .wrapper{
+  width: 100%;
+  height: 100%;
+}
+.card-outline img{
+  border-radius: 50%;
+  width: 50%;
+}
+.tab-content .user-block img{
+  width: 30px;
+  border-radius: 50%;
+}
+.tab-content .user-block .username a{
+  text-decoration: none;
+}
+.card-inline{
+  margin-top: 10px;
+}
+.card-inline .card-header{
+  background-color: #1a73e8;
+  color: white;
+  height: 50px;
+  font-size: 10px;
+}
+.card-inline .card-header .card-title{
+  font-size: 20px;
+}
+.card-header a{
+  text-decoration: none;
+  color: black;
+}
+.card-header ul li .fas{
+  margin-right: 5px;
+}
+.card-body ol{
+  margin-left: 3px;
+}
+.card-body ol li{
+  border-bottom: 2px solid #888888;
+  padding-left: 5px;
+}
+.card-body ol li .post{
+  margin-left: 5px;
+}
+.pane .danger{
+  background-color: #db3543;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 3px;
+  border-radius: 5px;
+  color: white;
+
+}
+
+.pane .fas{
+  margin-right: 5px;
+}
+.pane .card{
+  margin-bottom: 20px;
+}

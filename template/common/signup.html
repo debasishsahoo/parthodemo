@@ -1,0 +1,109 @@
+{% extends 'core/authBase.html' %}
+{% load static %}
+
+{% block content3 %} {% endblock content3 %}
+
+
+
+{% block content %}
+<div class="form">
+  <div class="left-box">
+    <div class="left">
+      <div class="down">
+        <img src="{% static 'img/logo_white.png' %}" />
+        <h2>Welcome</h2>
+        <h5>You already have an account!</h5>
+        <a href="/signin"
+          ><button type="submit" class="btn">Sign In</button></a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="right-box">
+    <div class="space">
+      <form action="#" method="POST">
+        {% csrf_token %}
+      
+          <div class="button-box">
+            <label for="check1"><b type="button" class="toggle-btn" onclick="S()">Student</b></label>
+            <label for='check2'><b type="button"  class="toggle-btn" onclick="F()">Faculty</b></label>
+
+            <!-- <button type="button" class="toggle-btn" onclick="C()">CDC</button> -->
+            <hr id="line1" />
+          </div>
+          <div class="pq">
+            <h2>Registration</h2>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6">
+                  {{form.first_name}}
+                  {{form.username}}
+                  {{form.dept}}
+                  {{form.semester}}
+                  {{form.password1}}
+                </div>
+                <div class="col-sm-6">
+                  {{form.last_name}}
+                  {{form.email}}
+                  {{form.year}}
+                  {{form.enrollment}}
+                  <div>{{form.password2}}<p id="demo"></p></div>
+                  {{form.is_student}}
+                  {{form.is_teacher}}
+                  {{form.is_cdc}}
+                </div>
+                
+              </div>
+
+              <button type="submit" class="regBtn">Sign Up</button>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+<script>
+  function S() {
+    
+    var line1 = document.getElementById("line1");
+
+    
+    line1.style.transform = "translateX(0px)";
+  }
+  function F() {
+    
+    var line1 = document.getElementById("line1");
+
+    
+    line1.style.transform = "translateX(120px)";
+  }
+</script>
+
+<script>
+    $(".cbl").change(function() {
+    $(".cbl").prop('checked', false);
+    $(this).prop('checked', true);
+         });
+         
+    </script>
+
+    <script>
+      function fun(){
+          var newPw =document.getElementById("newPw").value;
+          var newCPw =document.getElementById("newCPw").value;
+
+          if(newPw==newCPw){
+              document.getElementById("demo").innerHTML=" Matched"
+              document.getElementById("demo").style.color="green"
+          }
+          else{
+              document.getElementById("demo").innerHTML="Not  Matched"
+              document.getElementById("demo").style.color="red"
+          }
+      }
+
+  </script>
+{% endblock content%}

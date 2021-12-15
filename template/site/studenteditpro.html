@@ -1,0 +1,289 @@
+{% extends 'core/studentBase.html' %} 
+
+{% load static %} 
+
+
+{% block content1 %}
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'student_profile' %}"
+      ><i class="fas fa-chart-line"></i>Activity</a
+    >
+  </li>
+ <!--  <li class="nav-item">
+    <a class="nav-link" href="{% url 'student_semester' %}"
+      ><i class="fas fa-book-open"></i>Semester Details</a
+    >
+  </li> -->
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'student_attendence' %}"
+      ><i class="fas fa-calendar-minus"></i>Marks &
+      Attendence</a
+    >
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="{% url 'student_editpro' %}"
+      ><i class="fas fa-edit"></i>Edit Profile</a
+    >
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'student_addac' %}"
+      ><i class="fas fa-plus"></i>Add Activity</a
+    >
+  </li>
+  <!-- <li class="nav-item"><a class="nav-link" href="#"  ><i
+                class="fas fa-plus"></i>Add
+            CV Details</a></li> -->
+</ul>
+{% endblock content1 %} 
+
+
+{% block content2 %}
+<div class="pane" id="settings">
+    <div class="card">
+        <div class="card-header">
+            <b>Edit Personal Details</b>
+        </div>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+        <div class="card-header">
+            <form class="form-horizontal">
+                <div class="form-group row">
+                    <label for="inputName"
+                        class="col-sm-2 col-form-label">First Name</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.first_name}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName"
+                        class="col-sm-2 col-form-label">Last Name</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.last_name}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName"
+                        class="col-sm-2 col-form-label">Username</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.username}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail"
+                        class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.email}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPhone"
+                        class="col-sm-2 col-form-label">Contact
+                        No</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.phoneno}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress"
+                        class="col-sm-2 col-form-label">Department</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.dept}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress"
+                        class="col-sm-2 col-form-label">Batch</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.yearbatch}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress"
+                        class="col-sm-2 col-form-label">Year</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.year}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress"
+                        class="col-sm-2 col-form-label">Semester</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.semester}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress"
+                        class="col-sm-2 col-form-label">Reg. No.</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.regno}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress"
+                        class="col-sm-2 col-form-label">Enrollment No.</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.enrollment}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress"
+                        class="col-sm-2 col-form-label">Education</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.education}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputExperience"
+                        class="col-sm-2 col-form-label">Address </label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.address}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputExperience"
+                        class="col-sm-2 col-form-label">Skills</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.skill}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputExperience"
+                        class="col-sm-2 col-form-label">Projects</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.project}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress"
+                        class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.password1}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress"
+                        class="col-sm-2 col-form-label">Confirm Password</label>
+                    <div class="col-sm-10">
+                        {{UserProfileForm.password2}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputSkills" class="col-sm-2 col-form-label">Profile Pic
+                      Preview</label>
+                    <div class="col-sm-4">
+                      <label for="customFile">
+                      <img class="profile-user-img img-fluid img-circle" style="height: 130px; width:130px; border: 3px solid #042331; border-radius: 50%; " id='previewpic'
+                        src="{{StudentData.profilepic.url}}" alt="User profile picture">
+                      </label>
+                    </div>
+                  {{UserProfileForm.profilepic}}
+                </div>
+                
+                <!-- 
+                
+
+                <div class="form-group row">
+                    <label for="inputName2"
+                        class="col-sm-2 col-form-label">Skills</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control"
+                            id="inputName2" placeholder="Skills">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputName2"
+                        class="col-sm-2 col-form-label">Location</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control"
+                            id="inputName2" placeholder="Location">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputExperience"
+                        class="col-sm-2 col-form-label">Education
+                        Details</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="inputExperience"
+                            placeholder="Education Details"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputExperience"
+                        class="col-sm-2 col-form-label">Projects</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="inputExperience"
+                            placeholder="Projects"></textarea>
+                    </div>
+                </div> -->
+
+                <div class="form-group row">
+                    <div class="offset-sm-6 col-sm-10">
+                        <button type="submit"
+                            class="btn btn-success">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </form>
+    </div>
+    <!-- <div class="card">
+        <div class="card-header">
+            <b>Change Password</b>
+        </div>
+        <div class="card-header">
+            <form class="form-horizontal">
+                <div class="form-group row">
+                    <label for="oldPw"
+                        class="col-sm-2 col-form-label">Old Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control"
+                            id="oldPw" placeholder="Old Password" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="newPw"
+                        class="col-sm-2 col-form-label">New Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control"
+                            id="newPw" placeholder="New Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="newCPw"
+                        class="col-sm-2 col-form-label"> Confirm New Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control"
+                            id="newCPw" placeholder="New Password" onkeyup="fun()">
+                            <p id="demo"></p>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="offset-sm-6 col-sm-10">
+                        <button type="submit"
+                            class="btn btn-success" onclick="bt()">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> -->
+</div>
+
+{% endblock content2 %}
+{% block script %}
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#previewpic')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+{% endblock script %}

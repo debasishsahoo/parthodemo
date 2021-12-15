@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #f4f6f9;
+  }
+  .main {
+    position: fixed;
+    background: #042331;
+    height: 100%;
+    width: 250px;
+    box-shadow: 1px 10px 20px;
+    transition: 1s;
+    transition-property: left;
+  }
+  .main header {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 65px;
+    background: #063146;
+    user-select: none;
+  }
+  .main ul {
+    list-style: none;
+  }
+  .main img {
+    width: 35%;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 50%;
+  }
+  .main ul #middle {
+    text-align: center;
+  }
+  .main ul #middle b {
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+  }
+  .main ul .active {
+    background: #063146;
+  }
+  .main ul .list a {
+    text-decoration: none;
+    display: block;
+    line-height: 60px;
+    font-size: 18px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+    transition: 0.4s;
+  }
+  .main ul .list a:hover {
+    padding-left: 50px;
+  }
+  .main ul .list a i {
+    margin-right: 16px;
+  }
+  .content1 {
+    margin-left: 250px;
+  }
+  .content1 .menu {
+    background: white;
+    width: 100%;
+    height: 65px;
+  }
+  .content1 .menu header {
+    font-size: 22px;
+    line-height: 65px;
+    margin-left: 20px;
+    user-select: none;
+    float: left;
+  }
+  .content1 .menu header span {
+    margin-left: 5px;
+  }
+  .content1 .menu header label {
+    cursor: pointer;
+  }
+  
+  #check:checked ~ .main {
+    left: -190px;
+  }
+  
+  #check:checked ~ .main a span {
+    display: none;
+  }
+  #check:checked ~ .main b span {
+    display: none;
+  }
+  #check:checked ~ .main a {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+  }
+  #check:checked ~ .main b {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+  }
+  #check:checked ~ .main #middle b img {
+    margin-left: 20px;
+  }
+  
+  .content1 .menu .log {
+    float: right;
+    line-height: 65px;
+    margin-right: 20px;
+  }
+  .content1 .menu .log ul {
+    list-style: none;
+  }
+  .content1 .menu .log ul a {
+    text-decoration: none;
+    color: black;
+  }
+  .content1 .menu .log ul li i {
+    margin-right: 10px;
+  }
+  
+  #check:checked ~ .content1 {
+    margin-left: 60px;
+  }
+  #check {
+    display: none;
+  }
+  .details .card-header .card-title{
+      float: left;
+      margin: 10px;
+  }
+  .details .card-header .card-tools{
+      float: right;
+      margin: 10px;
+  }
+  .details .card-header .card-tools .btn{
+    background: #f8f9fa;
+    margin-left: 1px;
+  }
+  .content .bold{
+    line-height: 60px;
+    font-size: 22px;
+  }
+  .content .c1 a{
+    color: #17a2b8;
+  }
+  .content .c2 a{
+    color: #dc3545;
+  
+  }
+  .content .c3 a{
+    color: #28a745;
+  }
+  .content .c4 a{
+    color: #ffc107;
+  }
+  .content .c5 a{
+    color: #28a745;
+  }
+  .content .nav-link{
+    font-weight: bold;
+  }
+  .content .nav-link .fas{
+    margin-right: 5px;
+  }
+  .content ul li{
+    margin: 0 20px;
+  }

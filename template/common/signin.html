@@ -1,0 +1,199 @@
+{% extends 'core/authBase.html' %}
+{% load static %}
+
+{% block content3 %} {% endblock content3 %}
+
+{% block content %}
+<div class="form">
+  <div class="left-box">
+    <div class="left">
+      <div class="down">
+        <img src="{% static 'img/logo_white.png' %}" />
+        <h2>Welcome</h2>
+        <h5>You don't have any account!</h5>
+        <a href="/signup"><button type="submit" class="btn">Sign Up</button></a>
+      </div>
+    </div>
+  </div>
+  <div class="right-box">
+    <div class="space">
+      <form action="#" method="POST">
+        {% csrf_token %}
+        
+
+        <div class="pc">
+          <h2>Login</h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                {{form.username}}
+
+                {{form.password}}
+                <!-- <a href="#" id="forget1">Forget password?</a><br /> -->
+                <!-- {{form.is_student}}
+              {{form.is_teacher}}
+              {{form.is_cdc}} -->
+              </div>
+
+            </div>
+
+            <button type="submit" class="regBtn">Sign In</button>
+          </div>
+          <!-- <input
+          type="email"
+          class="form-control"
+          placeholder="Your Email *"
+          name="sEmail"
+          value=""
+          required
+        />
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Password *"
+          name="sPassword"
+          value=""
+          required
+        />
+        <a href="#" id="forget1">Forget password?</a><br />
+        <div>
+          <button type="submit" class="regBtn" onclick="fun1()">Sign In</button>
+        </div> -->
+        </div>
+      </form>
+      <form id="faculty-form">
+        <h2>Login as a Faculty</h2>
+        <input type="email" class="form-control" placeholder="Your Email *" name="sEmail" value="" required />
+        <input type="password" class="form-control" placeholder="Password *" name="sPassword" value="" required />
+        <a href="#" id="forget2">Forget password?</a><br />
+        <div>
+          <button type="submit" class="regBtn" onclick="fun2()">Sign In</button>
+        </div>
+      </form>
+      <form id="cdc-form">
+        <h2>Login as CDC</h2>
+        <input type="email" class="form-control" placeholder="Your Email *" name="sEmail" value="" required />
+        <input type="password" class="form-control" placeholder="Password *" name="sPassword" value="" required />
+        <a href="#" id="forget3">Forget password?</a><br />
+        <div>
+          <button type="submit" class="regBtn" onclick="fun3()">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="popup">
+  <div class="popup-content">
+    <div class="close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    <div class="card">
+      <div class="card-body login-card-body">
+        <p class="login-box-msg">
+          You forgot your password? Here you can easily retrieve a new password.
+        </p>
+
+        <form action="recover-password.html" method="post">
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Email" />
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <i class="fas fa-envelope"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary btn-block">
+                Request new password
+              </button>
+            </div>
+            <!-- /.col -->
+          </div>
+        </form>
+
+        <p class="mt-3 mb-1">
+          <a href="login.html">Login</a>
+        </p>
+      </div>
+      <!-- /.login-card-body -->
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+
+ 
+
+
+
+
+
+{% block content2 %}
+<script>
+  document.getElementById("forget1").addEventListener("click", function () {
+    document.querySelector(".popup").style.display = "flex";
+  });
+
+  document.getElementById("forget2").addEventListener("click", function () {
+    document.querySelector(".popup").style.display = "flex";
+  });
+
+  document.getElementById("forget3").addEventListener("click", function () {
+    document.querySelector(".popup").style.display = "flex";
+  });
+
+  document.querySelector(".close").addEventListener("click", function () {
+    document.querySelector(".popup").style.display = "none";
+  });
+  function S() {
+    var Student = document.getElementById("student-form");
+    var Faculty = document.getElementById("faculty-form");
+    var CDC = document.getElementById("cdc-form");
+    var line = document.getElementById("line");
+
+    Student.style.transform = "translateX(0px)";
+    Faculty.style.transform = "translateX(1000px)";
+    CDC.style.transform = "translateX(2000px)";
+    line.style.transform = "translateX(0px)";
+  }
+  function F() {
+    var Student = document.getElementById("student-form");
+    var Faculty = document.getElementById("faculty-form");
+    var CDC = document.getElementById("cdc-form");
+    var line = document.getElementById("line");
+
+    Student.style.transform = "translateX(-1000px)";
+    Faculty.style.transform = "translateX(0px)";
+    CDC.style.transform = "translateX(1000px)";
+    line.style.transform = "translateX(115px)";
+  }
+  function C() {
+    var Student = document.getElementById("student-form");
+    var Faculty = document.getElementById("faculty-form");
+    var CDC = document.getElementById("cdc-form");
+    var line = document.getElementById("line");
+
+    Student.style.transform = "translateX(-2000px)";
+    Faculty.style.transform = "translateX(-1000px)";
+    CDC.style.transform = "translateX(0px)";
+    line.style.transform = "translateX(230px)";
+  }
+</script>
+
+<script>
+  function fun1() {
+    document.location.href = "student_dash.html";
+  }
+</script>
+<script>
+  function fun2() {
+    document.location.href = "faculty_dash.html";
+  }
+</script>
+<script>
+  function fun3() {
+    document.location.href = "manage_student_cdc.html";
+  }
+</script>
+{% endblock content2 %}

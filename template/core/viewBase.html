@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Student Tracking System</title>
+    <link rel="stylesheet" href="{% static 'css/view.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css'%}">
+
+</head>
+
+<body>
+
+    
+    <div class="content1">
+        <div class="menu">
+
+            <header>
+                
+                <span>
+                {% block content1 %}
+                
+                {% endblock content1 %}
+                 </span>
+            </header>
+            <div class="log">
+                <ul>
+                    <li><a href="{% url 'manage_student_faculty' %}">Back<i class="fas fa-arrow-right"></i></a></li>
+                </ul>
+            </div>
+        </div><br>
+        <div class="wrapper">
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+
+
+                <!-- Main content -->
+                {% block content2 %}{% endblock content2 %}
+                <!-- /.content -->
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- AdminLTE App -->
+    <script src="{% static 'dist/js/adminlte.min.js' %}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{% static 'dist/js/demo.js' %}"></script>
+    <script src="{% static 'plugins/toastr/toastr.min.js'%}"></script>
+
+
+    {% if messages %}
+
+    {% for message in messages %}
+
+    {% if message.tags == 'success'%}
+    <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+
+    {% elif message.tags == 'info' %}
+    <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+
+    {% elif message.tags == 'warning' %}
+    <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+
+    {% elif message.tags == 'error' %}
+    <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+    {% endif %}
+
+
+    {% endfor %}
+
+    {% endif %}
+
+    {% if form.errors %}
+    <script type=text/javascript>toastr.error('{{ form.errors|escape }}')</script>
+    {% endif %}
+</body>
+
+</html>

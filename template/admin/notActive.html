@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Student Tracking System</title>
+    <link rel="stylesheet" href="{% static 'css/faculty.css' %}">
+
+</head>
+
+<body>
+    <div class="content2">
+        <div class="menu">
+
+            <header>
+                <label for="check"><i class="fa fa-bars" aria-hidden="true"></i></label>
+                <span>{% block content2 %}Student Tracking System | Faculty Dashboard {% endblock content2 %}</span>
+            </header>
+            <div class="log">
+                <ul>
+                    <li><a href="{% url 'signout' %}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                </ul>
+            </div>
+        </div><br>
+    </div>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 style="font-size: 20px;">Verifaction on Processs</h1>
+                    </div>
+                    <div class="col-sm-6">
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content" style="margin-top: 5%;">
+            <div class="error-page">
+                <div class="container" style="width: 50%;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h2 class="headline text-warning" style="font-size: 80px; float: right;">500</h2>
+                        </div>
+                        <div class="col-sm-8">
+                        <div class="error-content">
+                            <h3><i class="fas fa-exclamation-triangle text-info"></i> Oops! Something went wrong.</h3>
+
+                            <p>
+                                Admin not <b>Verified</b> your Acccount or Your Account <b>Blocked</b> by Admin.
+                                Meanwhile, you may please Contact <a href="#">cdc@gmit.com</a>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.error-page -->
+
+        </section>
+        <!-- /.content -->
+    </div>
+</body>

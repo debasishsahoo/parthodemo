@@ -1,0 +1,227 @@
+{% extends 'core/viewBase.html' %}
+{% load static %}
+
+{% block content1 %}
+Student Tracking System | Faculty Login | View Student
+{% endblock content1 %}
+
+
+{% block content2 %}
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+
+                <!-- Profile Image -->
+                <div class="card card-primary card-outline">
+                    <div class="card-body box-profile">
+                        <div class="text-center">
+                            <img class="profile-user-img img-fluid img-circle" 
+                            style="height: 130px; width:130px; border: 3px solid #042331; border-radius: 50%; "
+                            src="{{studentdetails.profilepic.url}}"
+                                alt="User profile picture">
+                        </div>
+
+                        <h3 class="profile-username text-center">{{studentdetails.first_name}} {{studentdetails.last_name}}</h3>
+                        <p class="text-muted text-center">{{studentdetails.dept}}</p>
+
+                        <ul class="list-group list-group-unbordered mb-3">
+                            <li class="list-group-item">
+                                <b>Batch:</b>
+                                <p class="text-muted float-right">{{studentdetails.yearbatch}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Reg No:</b>
+                                <p class="text-muted float-right">{{studentdetails.regno}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Roll No:</b>
+                                <p class="text-muted float-right">{{studentdetails.enrollment}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Semester:</b>
+                                <p class="text-muted float-right">{{studentdetails.semester}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+                <!-- About Me Box -->
+                <div class="card card-primary card-inline">
+                    <div class="card-header">
+                        <h3 class="card-title">About Me</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <strong><i class="fas fa-school"></i> Education</strong>
+
+                        <p class="text-muted">
+                            {{studentdetails.education}}
+                        </p>
+
+                        <hr>
+
+                        <strong><i class="fas fa-map-marker-alt"></i> Address</strong>
+
+                        <p class="text-muted">{{studentdetails.address}}<br>
+                            Mobile No.- {{studentdetails.phoneno}}
+                        </p>
+
+                        <hr>
+
+                        <strong><i class="fas fa-award"></i> Skills</strong>
+
+                        <p class="text-muted">
+                            {{studentdetails.skill}}
+                        </p>
+
+                        <hr>
+
+                        <strong><i class="fas fa-project-diagram"></i> Project</strong>
+
+                        <p class="text-muted">{{studentdetails.project}}</p>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header p-2">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item"><a class="nav-link active" href="activity" data-toggle="tab"><i
+                                        class="fas fa-chart-line"></i>Upload Marks</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="#marks" data-toggle="tab"><i
+                                        class="fas fa-edit"></i>Upload
+                                    Marks</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#attendence" data-toggle="tab"><i
+                                        class="fas fa-edit"></i>Upload
+                                    Attendence</a></li> -->
+                            <!-- <li class="nav-item"><a class="nav-link" href="#settings"
+                                                    data-toggle="tab"><i class="fas fa-edit"></i>Edit
+                                                    Profile</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#eactivity"
+                                                    data-toggle="tab"><i class="fas fa-plus"></i>Add
+                                                    Activity</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#cv" data-toggle="tab"><i
+                                                        class="fas fa-plus"></i>Add
+                                                    CV Details</a></li> -->
+                        </ul>
+                    </div><!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="content">
+                            <div class="pane" id="eactivity">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <form class="form-horizontal" action="" method="POSt">
+                                            {% csrf_token %}
+                                            <div class="form-group row">
+                                                <label for="inputName"
+                                                    class="col-sm-2 col-form-label">Department:</label>
+                                                <div class="col-sm-10">
+                                                    {{AcademicForm.studentdept}}
+                                                    <!-- <input type="text" class="form-control" id="inputName" placeholder="Name"> -->
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputEmail" class="col-sm-2 col-form-label">Year</label>
+                                                <div class="col-sm-10">
+                                                    {{AcademicForm.studentyear}}
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Semester</label>
+                                                <div class="col-sm-10">
+                                                    {{AcademicForm.studentsemester}}
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">subject</label>
+                                                <div class="col-sm-10">
+                                                    {{AcademicForm.subject}}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Student
+                                                    Attendence</label>
+                                                <div class="col-sm-4">
+                                                    {{AcademicForm.subjectattendence}}
+                                                </div>
+                                                <label for="inputName2"
+                                                    class="col-sm-2 col-form-label">Attendence(Total)</label>
+                                                <div class="col-sm-4">
+                                                    {{AcademicForm.subjectclass}}
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Student
+                                                    Score</label>
+                                                <div class="col-sm-4">
+                                                    {{AcademicForm.subjectscore}}
+                                                </div>
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Total
+                                                    Marks</label>
+                                                <div class="col-sm-4">
+                                                    {{AcademicForm.subjectmarks}}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="offset-sm-6 col-sm-10">
+                                                    <button type="submit" class="btn btn-danger">Submit</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div><br /><br />
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title"> Activity Status</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body p-0">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>Subject</th>
+                                                    <th>Semester</th>
+                                                    <th>Attendence</th>
+                                                    <th>Marks</th>
+                                                    <th>Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for i in StudentMarks %}
+                                                <tr>
+                                                    <td>{{i.subject}}</td>
+                                                    <td>{{i.studentsemester}}</td>
+                                                    <td>{{i.subjectattendence}}/{{i.subjectclass}}</td>
+                                                    <td>{{i.subjectscore}}/{{i.subjectmarks}}</td>
+                                                    <td>{{i.date}}</td>
+
+                                                </tr>
+                                                {% endfor %}
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.tab-content -->
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+{% endblock content2 %}

@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Student Tracking System</title>
+    <link rel="stylesheet" href="{% static 'css/faculty.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/toastr/toastr.min.css'%}">
+
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <div class="main">
+        <header>
+            <span>Hello GMIT</span>
+        </header>
+        <ul>
+            
+            {% block content1 %}
+            
+            {% endblock content1 %}
+
+            <!-- <li class="list"><a href="#"><i class="fas fa-poll-h"></i><span>Upload CGPA</span></a>
+            </li>
+            <li class="list"><a href="#"><i class="fas fa-envelope-open-text"></i><span> for
+                        Leave</span></a></li> -->
+
+        </ul>
+    </div>
+    <div class="content1">
+        <div class="menu">
+
+            <header>
+                <label for="check"><i class="fa fa-bars" aria-hidden="true"></i></label>
+                <span>{% block content2 %}Student Tracking System | Faculty Dashboard {% endblock content2 %}</span>
+            </header>
+            <div class="log">
+                <ul>
+                    <li><a href="{% url 'signout' %}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                </ul>
+            </div>
+        </div><br>
+        {% block content3  %}
+        
+        {% endblock content3  %}
+    </div>
+    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- AdminLTE App -->
+    <script src="{% static 'dist/js/adminlte.min.js' %}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{% static 'dist/js/demo.js' %}"></script>
+    <script src="{% static 'plugins/toastr/toastr.min.js'%}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    {% if messages %}
+
+    {% for message in messages %}
+
+    {% if message.tags == 'success'%}
+    <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+
+    {% elif message.tags == 'info' %}
+    <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+
+    {% elif message.tags == 'warning' %}
+    <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+
+    {% elif message.tags == 'error' %}
+    <script type=text/javascript>toastr.{{ message.tags }}('{{ message }}')</script>
+    {% endif %}
+
+
+    {% endfor %}
+
+    {% endif %}
+
+    {% if form.errors %}
+    <script type=text/javascript>toastr.error('{{ form.errors|escape }}')</script>
+    {% endif %}
+
+
+    {% block script %}
+    
+    {% endblock script %}
+</body>
+
+</html>

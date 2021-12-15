@@ -1,0 +1,175 @@
+{% extends 'core/facultyBase.html' %}
+{% load static %}
+
+
+{% block content1 %}
+
+            <li id="middle"><b href="#"><img src="{{StudentData.profilepic.url}}">
+                    <div><span>{{StudentData.first_name}}
+                        {{StudentData.last_name}}</span></div>
+                    </h5>
+                </b></li>
+            <li class="list"><a href="{% url 'faculty_profile' %}"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            
+            <li class="list active"><a href="{% url 'manage_student_faculty' %}"><i class="fas fa-user-graduate"></i><span>Manage Student</span></a></li>
+
+            <!-- <li class="list"><a href="#"><i class="fas fa-poll-h"></i><span>Upload CGPA</span></a>
+            </li>
+            <li class="list"><a href="#"><i class="fas fa-envelope-open-text"></i><span> for
+                        Leave</span></a></li> -->
+
+        
+{% endblock content1 %}
+
+
+
+{% block content2 %}
+
+Student Tracking System | Faculty Login | Manage Student
+{% endblock content2 %}
+
+
+
+
+{% block content3 %}
+<section class="content ">
+            <div class="container-fluid">
+                <div class="bold" style="font-size: 25px;">Manage Student</div><br/>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <!-- general form elcard-headeements -->
+                        <div class="card details">
+                            <!-- <div class="card-header p-2">
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item c1"><a class="nav-link active" href="#ME"
+                                            data-toggle="tab"><i class="fas fa-cogs"></i>Mechanical (40*)</a></li>
+                                    <li class="nav-item c2"><a class="nav-link" href="#CE"
+                                            data-toggle="tab"><i class="fas fa-city"></i>Civil (3*)
+                                            </a></li>
+                                    <li class="nav-item c3"><a class="nav-link" href="#EE"
+                                            data-toggle="tab"><i class="fas fa-bolt"></i>Electrical (42*)
+                                            </a></li>
+                                    <li class="nav-item c4"><a class="nav-link" href="#ECE"
+                                            data-toggle="tab"><i class="fas fa-wifi"></i>Electronics (50*)
+                                            </a></li>
+                                    <li class="nav-item c5"><a class="nav-link" href="#CSE"
+                                            data-toggle="tab"><i class="fas fa-laptop-code"></i>Computer Science (110*)
+                                            </a></li>
+                                    
+                                </ul>
+                            </div> --><!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <div class="pane">
+                                        <!-- Post -->
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <!-- general form elcard-headeements -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="card-title float-left">Student Details</h5>
+                        
+                                                        <div class="card-tools float-right">
+                                                            <div class="input-group input-group-sm" style="width: 150px;">
+                                                                <input type="text" id="myInput" name="table_search" class="form-control "
+                                                                    placeholder="Search">
+                        
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.card-header -->
+                                                    <div class="card-body table-responsive p-0">
+                                                        <table class="table table-hover table-striped text-nowrap">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Roll No</th>
+                                                                    <th>Name</th>
+                                                                    <th>Username</th>
+                                                                    <th>Email</th>
+                                                                    <th>Contact No</th>
+                                                                    <!-- <th>Profile Pic</th> -->
+                                                                    <th>Batch</th>
+
+                                                                    <th>Department</th>
+                                                                    <th>Semester</th>
+                                                                    <th>Year</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="myTable">
+                                                                {% for i in allstudent %}
+                                                                <tr>
+                                                                    <td>{{i.enrollment}}</td>
+                                                                    <td>{{i.first_name}} {{i.last_name}}</td>
+                                                                    
+                                                                    <td>{{i.username}}</td>
+                                                                    <td>{{i.email}}</td>
+                                                                    <td>{{i.phoneno}}</td>
+                                                                    <!--  <td><img alt="Avatar" class="table-avatar" src="{{i.profilepic.url}}" height="50"
+                                                                                width="50"></td> -->
+                                                                    <td>{{i.yearbatch}}</td>
+                                                                    
+                                                                    <td>{{i.dept}}</td>
+                                                                 <td>{{i.semester}}</td>
+                                                                    <td>{{i.year}}</td>
+                                                                    <td class="project-actions text-right">
+                                                                        <a class="btn btn-success btn-sm" href="{% url 'view_student_faculty' pk=i.id %}">
+                                                                            <i class="fas fa-upload">
+                                                                            </i>
+                                                                            Upload Marks
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                                {% endfor %}
+                        
+                        
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- /.card-body -->
+                                                </div>
+                                                <!-- /.card -->
+                        
+                                            </div>
+                                        </div>
+                                        <!-- /.post -->
+                                    </div>
+                                    <!-- /.tab-pane -->
+                                    
+                                    
+                                    <!-- /.tab-pane -->
+                                </div>
+                                <!-- /.tab-content -->
+                            </div><!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock content3 %}
+
+
+{% block script %}
+<script>
+    $(document).ready(function () {
+      $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+    
+{% endblock script %}
+
+
+
+
+

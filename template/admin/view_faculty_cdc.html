@@ -1,0 +1,433 @@
+{% extends 'core/viewBase.html' %}
+{% load static %}
+
+{% block content1 %}
+Student Tracking System | CDC Login | View Faculty
+{% endblock content1 %}
+
+
+{% block content2 %}
+<section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <!-- Profile Image -->
+                                <div class="card card-primary card-outline">
+                                    <div class="card-body box-profile">
+                                        <div class="text-center">
+                                            <img class="profile-user-img img-fluid img-circle" src="{% static 'img/bg.png' %}"
+                                                alt="User profile picture">
+                                        </div>
+
+                                        <h3 class="profile-username text-center">Partha Das</h3>
+                                        <p class="text-muted text-center">Electronics And Communication Engineer</p>
+
+                                        <ul class="list-group list-group-unbordered mb-3">
+                                            <li class="list-group-item">
+                                                <b>Joining Year</b> <p class="text-muted float-right">2017</p>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>ID No:</b> <p class="text-muted float-right">1924</p>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+
+                                <!-- About Me Box -->
+                                <div class="card card-primary card-inline">
+                                    <div class="card-header">
+                                        <h3 class="card-title">About Me</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <strong><i class="fas fa-school"></i> Education</strong>
+
+                                        <p class="text-muted">
+                                            B.S. in Computer Science from the University of Tennessee at Knoxville
+                                        </p>
+
+                                        <hr>
+
+                                        <strong><i class="fas fa-map-marker-alt"></i> Address</strong>
+
+                                        <p class="text-muted">Dhatrigram, Purba Bardhaman<br>
+                                            Mobile No.- 8101256262<br>
+                                            Email: abc@gmail.com
+                                        </p>
+
+                                        <hr>
+
+                                        <strong><i class="fas fa-award"></i> Skills</strong>
+
+                                        <p class="text-muted">
+                                            <span class="tag tag-danger">UI Design</span>
+                                            <span class="tag tag-success">Coding</span>
+                                            <span class="tag tag-info">Javascript</span>
+                                            <span class="tag tag-warning">PHP</span>
+                                            <span class="tag tag-primary">Node.js</span>
+                                        </p>
+
+                                        <hr>
+
+                                        <strong><i class="fas fa-project-diagram"></i> Project</strong>
+
+                                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Etiam
+                                            fermentum enim neque.</p>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-9">
+                                <div class="card">
+                                    <div class="card-header p-2">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item"><a class="nav-link active" href="#activity"
+                                                    data-toggle="tab"><i class="fas fa-chart-line"></i>Activity</a></li>
+                                            
+                                            <!-- <li class="nav-item"><a class="nav-link" href="#settings"
+                                                    data-toggle="tab"><i class="fas fa-edit"></i>Edit
+                                                    Profile</a></li> -->
+                                            <li class="nav-item"><a class="nav-link" href="#aactivity"
+                                                    data-toggle="tab"><i class="fas fa-check-circle"></i>Approve
+                                                    Activity</a></li>
+                                        </ul>
+                                    </div><!-- /.card-header -->
+                                    <div class="card-body">
+                                        <div class="tab-content">
+                                            <div class="active tab-pane" id="activity">
+                                                <!-- Post -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <ol>
+                                                            <li>
+                                                                <div class="post">
+                                                                    <div class="user-block">
+
+                                                                        <span class="username">
+                                                                            <b>....Activity Name....</b>
+
+                                                                        </span>
+                                                                        <div class="description"><i class="fas fa-calendar-check"></i>05/09/2021
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /.user-block -->
+                                                                    <p>
+                                                                        Lorem ipsum represents a long-held tradition for
+                                                                        designers,
+                                                                        typographers and the like. Some people hate it
+                                                                        and argue
+                                                                        for
+                                                                        its demise, but others ignore the hate as they
+                                                                        create
+                                                                        awesome
+                                                                        tools to help create filler text for everyone
+                                                                        from bacon
+                                                                        lovers
+                                                                        to Charlie Sheen fans.
+                                                                    </p>
+
+
+
+                                                                </div>
+                                                            </li>
+                                                            <!-- /.post -->
+
+                                                            <!-- Post -->
+                                                            <li>
+                                                                <div class="post ">
+                                                                    <div class="user-block">
+
+                                                                        <span class="username">
+                                                                            <b>....Activity Name....</b>
+
+                                                                        </span>
+                                                                        <div class="description"><i class="fas fa-calendar-check"></i> 20/08/2021
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /.user-block -->
+                                                                    <p>
+                                                                        Lorem ipsum represents a long-held tradition for
+                                                                        designers,
+                                                                        typographers and the like. Some people hate it
+                                                                        and argue
+                                                                        for
+                                                                        its demise, but others ignore the hate as they
+                                                                        create
+                                                                        awesome
+                                                                        tools to help create filler text for everyone
+                                                                        from bacon
+                                                                        lovers
+                                                                        to Charlie Sheen fans.
+                                                                    </p>
+
+
+                                                                </div>
+                                                            </li>
+
+                                                            <!-- /.post -->
+
+                                                            <!-- Post -->
+                                                            <li>
+                                                                <div class="post ">
+                                                                    <div class="user-block">
+
+                                                                        <span class="username">
+                                                                            <b>....Activity Name....</b>
+
+                                                                        </span>
+                                                                        <div class="description"><i class="fas fa-calendar-check"></i> 05/08/2021
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /.user-block -->
+                                                                    <p>
+                                                                        Lorem ipsum represents a long-held tradition for
+                                                                        designers,
+                                                                        typographers and the like. Some people hate it
+                                                                        and argue
+                                                                        for
+                                                                        its demise, but others ignore the hate as they
+                                                                        create
+                                                                        awesome
+                                                                        tools to help create filler text for everyone
+                                                                        from bacon
+                                                                        lovers
+                                                                        to Charlie Sheen fans.
+                                                                    </p>
+
+
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                                <!-- /.post -->
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                            
+
+                                            <!-- /.tab-pane -->
+
+                                            <!-- <div class="tab-pane" id="settings">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <b>Edit Personal Details</b>
+                                                    </div>
+                                                    <div class="card-header">
+                                                        <form class="form-horizontal">
+                                                            <div class="form-group row">
+                                                                <label for="inputName"
+                                                                    class="col-sm-2 col-form-label">Name</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="email" class="form-control" id="inputName"
+                                                                        placeholder="Name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="inputPhone" class="col-sm-2 col-form-label">Contact
+                                                                    No</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="inputPhone"
+                                                                        placeholder="Contact Number">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="inputAddress"
+                                                                    class="col-sm-2 col-form-label">Address</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="inputAddress"
+                                                                        placeholder="Address">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="inputFyear" class="col-sm-2 col-form-label">Joining
+                                                                    Year</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="inputFyear"
+                                                                        placeholder="Joining Year">
+                                                                </div>
+                                                            </div>
+                                                            
+        
+                                                            <div class="form-group row">
+                                                                <label for="inputName2"
+                                                                    class="col-sm-2 col-form-label">Skills</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="inputName2"
+                                                                        placeholder="Skills">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="inputName2"
+                                                                    class="col-sm-2 col-form-label">Location</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="inputName2"
+                                                                        placeholder="Location">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="inputExperience"
+                                                                    class="col-sm-2 col-form-label">Education Details</label>
+                                                                <div class="col-sm-10">
+                                                                    <textarea class="form-control" id="inputExperience"
+                                                                        placeholder="Education Details"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="inputExperience"
+                                                                    class="col-sm-2 col-form-label">Projects</label>
+                                                                <div class="col-sm-10">
+                                                                    <textarea class="form-control" id="inputExperience"
+                                                                        placeholder="Projects"></textarea>
+                                                                </div>
+                                                            </div>
+        
+                                                            <div class="form-group row">
+                                                                <div class="offset-sm-6 col-sm-10">
+                                                                    <button type="submit" class="btn btn-success">Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <b>Change Password</b>
+                                                    </div>
+                                                    <div class="card-header">
+                                                        <form class="form-horizontal">
+                                                            <div class="form-group row">
+                                                                <label for="oldPw"
+                                                                    class="col-sm-2 col-form-label">Old Password</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="password" class="form-control"
+                                                                        id="oldPw" placeholder="Old Password" >
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="newPw"
+                                                                    class="col-sm-2 col-form-label">New Password</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="password" class="form-control"
+                                                                        id="newPw" placeholder="New Password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label for="newCPw"
+                                                                    class="col-sm-2 col-form-label"> Confirm New Password</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="password" class="form-control"
+                                                                        id="newCPw" placeholder="New Password" onkeyup="fun()">
+                                                                        <p id="demo"></p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group row">
+                                                                <div class="offset-sm-6 col-sm-10">
+                                                                    <button type="submit"
+                                                                        class="btn btn-success" onclick="bt()">Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <div class="tab-pane" id="aactivity">
+                                                <div class="row">
+        
+                                                    <div class="col-md-12">
+                                                        <!-- general form elcard-headeements -->
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <h5 class="card-title">Approve Activity</h5>
+                                
+                                                                
+                                                            </div>
+                                                            <!-- /.card-header -->
+                                                            <div class="card-body table-responsive ">
+                                                                <table class="table table-hover  table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>ID No</th>
+                                                                            <th>Activity Name</th>
+                                                                            <th>Date</th>
+                                                                            <th>Activity Details</th>
+                                                                            <th style="width: 120px;">Document</th>
+                                                                            <th style="width: 230px;">Action</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Activity Name </td>
+                                                                            <td>00/00/0000</td>
+                                                                            <td class="col-sm-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati magni animi, quidem nobis iste quisquam assumenda possimus, enim rem in optio culpa laboriosam. Quisquam vero repellendus autem sit iusto?</td>
+                                                                            <td><a href="#"
+                                                                                class="btn btn-success"><i class="fas fa-eye"></i> View</a></td>
+                                                                            <td>
+                                                                                <a href="#"
+                                                                                    class="btn btn-success"><i class="fas fa-check"></i> Approve</a>
+                                                                                <a href="#"
+                                                                                    class="btn btn-danger"><i class="fas fa-times"></i> Reject</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Activity Name </td>
+                                                                            <td>00/00/0000</td>
+                                                                            <td class="col-sm-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati magni animi, quidem nobis iste quisquam assumenda possimus, enim rem in optio culpa laboriosam. Quisquam vero repellendus autem sit iusto?</td>
+                                                                            <td><a href="#"
+                                                                                class="btn btn-success"><i class="fas fa-eye"></i> View</a></td>
+                                                                            <td>
+                                                                                <a href="#"
+                                                                                    class="btn btn-success"><i class="fas fa-check"></i> Approve</a>
+                                                                                <a href="#"
+                                                                                    class="btn btn-danger"><i class="fas fa-times"></i> Reject</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Activity Name </td>
+                                                                            <td>00/00/0000</td>
+                                                                            <td class="col-sm-3">ipsum dolor sit, amet consectetur adipisicing elit. Omnis obcaecati magni animi, quidem nobis iste quisquam assumenda possimus, enim rem in optio culpa laboriosam. Quisquam vero repellendus autem sit iusto?</td>
+                                                                            <td><a href="#"
+                                                                                class="btn btn-success"><i class="fas fa-eye"></i> View</a></td>
+                                                                            <td>
+                                                                                <a href="#"
+                                                                                    class="btn btn-success"><i class="fas fa-check"></i> Approve</a>
+                                                                                <a href="#"
+                                                                                    class="btn btn-danger"><i class="fas fa-times"></i> Reject</a>
+                                                                            </td>
+                                                                        </tr>
+                                
+                                
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <!-- /.card-body -->
+                                                        </div>
+                                                        <!-- /.card -->
+                                
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                        </div>
+                                        <!-- /.tab-content -->
+                                    </div><!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div><!-- /.container-fluid -->
+                </section>
+{% endblock content2 %}

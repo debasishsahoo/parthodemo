@@ -1,0 +1,131 @@
+{% extends 'core/studentBase.html' %}
+{% load static %}
+
+
+{% block content1 %}
+<ul class="nav nav-pills">
+    <li class="nav-item"><a class="nav-link active" href="{% url 'student_profile' %}"
+            ><i class="fas fa-chart-line"></i>Activity</a></li>
+    <!-- <li class="nav-item"><a class="nav-link" href="{% url 'student_semester' %}"
+            ><i class="fas fa-book-open"></i>Semester
+            Details</a></li> -->
+    <li class="nav-item"><a class="nav-link" href="{% url 'student_attendence' %}"
+            ><i class="fas fa-calendar-minus"></i>Marks &
+            Attendence</a></li>
+    <li class="nav-item"><a class="nav-link " href="{% url 'student_editpro' %}"
+            ><i class="fas fa-edit"></i>Edit
+            Profile</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'student_addac' %}"
+            ><i class="fas fa-plus"></i>Add
+            Activity</a></li>
+    
+</ul>
+{% endblock content1 %}
+
+
+
+{% block content2 %}
+<div class="pane" id="activity">
+    <!-- Post -->
+    <div class="card">
+        <div class="card-header">
+            
+            <ol>
+            {% for i in ApproveActivity %}
+                <li>
+                    <div class="post">
+                        <div class="user-block">
+
+                            <span class="username">
+                                <b>{{i.activityname}}</b>
+
+                            </span>
+                            <div class="description"><i class="fas fa-calendar-check"></i>{{i.activitydate}}
+                            </div>
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                           {{i.activitydetails|safe}}
+                        </p>
+
+
+
+                    </div>
+                </li>
+                {% endfor %}
+                <!-- /.post -->
+
+                {% comment %} <!-- Post -->
+                <li>
+                    <div class="post ">
+                        <div class="user-block">
+
+                            <span class="username">
+                                <b>....Activity Name....</b>
+
+                            </span>
+                            <div class="description"><i class="fas fa-calendar-check"></i> 20/08/2021
+                            </div>
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                            Lorem ipsum represents a long-held tradition for
+                            designers,
+                            typographers and the like. Some people hate it
+                            and argue
+                            for
+                            its demise, but others ignore the hate as they
+                            create
+                            awesome
+                            tools to help create filler text for everyone
+                            from bacon
+                            lovers
+                            to Charlie Sheen fans.
+                        </p>
+
+
+                    </div>
+                </li>
+
+                <!-- /.post -->
+
+                <!-- Post -->
+                <li>
+                    <div class="post ">
+                        <div class="user-block">
+
+                            <span class="username">
+                                <b>....Activity Name....</b>
+
+                            </span>
+                            <div class="description"><i class="fas fa-calendar-check"></i> 05/08/2021
+                            </div>
+                        </div>
+                        <!-- /.user-block -->
+                        <p>
+                            Lorem ipsum represents a long-held tradition for
+                            designers,
+                            typographers and the like. Some people hate it
+                            and argue
+                            for
+                            its demise, but others ignore the hate as they
+                            create
+                            awesome
+                            tools to help create filler text for everyone
+                            from bacon
+                            lovers
+                            to Charlie Sheen fans.
+                        </p>
+
+
+                    </div>
+                </li> {% endcomment %}
+            </ol>
+        </div>
+    </div>
+    <!-- /.post -->
+</div>
+
+{% endblock content2 %}
+
+

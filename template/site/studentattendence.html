@@ -1,0 +1,89 @@
+{% extends 'core/studentBase.html' %}
+{% load static %}
+
+
+{% block content1 %}
+<ul class="nav nav-pills">
+    <li class="nav-item"><a class="nav-link " href="{% url 'student_profile' %}"
+            ><i class="fas fa-chart-line"></i>Activity</a></li>
+    <!-- <li class="nav-item"><a class="nav-link" href="{% url 'student_semester' %}"
+            ><i class="fas fa-book-open"></i>Semester
+            Details</a></li> -->
+    <li class="nav-item"><a class="nav-link active" href="{% url 'student_attendence' %}"
+            ><i class="fas fa-calendar-minus"></i>Marks &
+            Attendence</a></li>
+    <li class="nav-item"><a class="nav-link " href="{% url 'student_editpro' %}"
+            ><i class="fas fa-edit"></i>Edit
+            Profile</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'student_addac' %}"
+            ><i class="fas fa-plus"></i>Add
+            Activity</a></li>
+    <!-- <li class="nav-item"><a class="nav-link" href="#"><i
+                class="fas fa-plus"></i>Add
+            CV Details</a></li> -->
+</ul>
+{% endblock content1 %}
+
+
+
+{% block content2 %}
+<div class="pane" id="attendence">
+    <!-- The timeline -->
+    <div class="timeline timeline-inverse">
+        <!-- timeline time label -->
+
+        <!-- /.timeline-label -->
+        <!-- timeline item -->
+        <div>
+            <div class="timeline-item">
+                <div class="timeline-body">
+                    <div class="container-fluid">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title"> Subject Marks & Attendence</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body p-0">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Subject</th>
+                                                <th>Semester</th>
+                                                <th>Attendence</th>
+                                                <th>Marks</th>
+                                                <th>Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for i in StudentMarks %}
+                                            <tr>
+                                                <td>{{i.subject}}</td>
+                                                <td>{{i.studentsemester}}</td>
+                                                <td>{{i.subjectattendence}}/{{i.subjectclass}}</td>
+                                                <td>{{i.subjectscore}}/{{i.subjectmarks}}</td>
+                                                <td>{{i.date}}</td>
+
+                                            </tr>
+                                            {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            
+                            <!-- /.card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+
+    </div>
+</div>
+{% endblock content2 %}
+
+
